@@ -1,10 +1,9 @@
 body {
     font-family: 'Dancing Script', Arial, sans-serif;;
     background-color: #02010a;
-
 }
 
-header {
+#cabecera {
     background-color: #5b7989;
     border-radius: 10px 10px 0px 0px;
     -moz-border-radius: 10px 10px 0px 0px;
@@ -14,65 +13,106 @@ header {
     padding: 0 2em;
 }
 
-header h1 {
+#cabecera h1 {
     text-shadow: 2px 2px 2px #02010a;
     float: left;
 }
 
-header nav {
+#cabecera nav {
     float: right;
     padding: 1em;    
 }
 
-header nav a {
+#cabecera nav a {
     color: white;
 }
 
-header nav li {
+#cabecera nav li {
     display: inline;
 }
 
-header nav a:hover, header nav a:active{
+#cabecera nav a:hover, #cabecera nav a:active{
     text-decoration: none;
 }
 
-header nav .active a:link, header nav .active a:visited {
+#cabecera nav .active a:link, #cabecera nav .active a:visited {
     text-decoration: none;
 }
 
-.contenido {
-    display: flex;
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container div {
+	box-sizing: border-box;
+	padding: 20px;
 }
 
 .imagenCentral {
     background-color: #82c3a6;
-
+    text-align: center;
+    width: 100%;
 }
 
-.imagenCentral, .imagenSecundaria1, .imagenSecundaria2 {
-
-	width: 100%;
+#imagen1 {
+    width: 100%;
+    border: 1px solid black;
 }
 
-@media (min-width: 600px) {
-	.imagenCentral, .imagenSecundaria1, .imagenSecundaria2 {
-	width: 50%;
-	}
+.imagenesSecundarias {
+    background-color:  #d5c75f;
+    display: flex;
+    width: 100%;    
+}
+
+#imagen2, #imagen3 {
+    width: 50%;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+
+#contentinfo {
+    background-color: #C6d5c5;
+    text-align: center;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;    
+}
+
+
+
+@media (max-width: 899px) {
+
+	.container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagenesSecundarias {
+        flex-direction: column;
+    }
+
+    #imagen2, #imagen3 {
+        width: 98%;
+    }
+
+
 }
 
 @media (min-width: 900px) {
-	.imagenCentral {
+	
+	.container {
 	width: 900px;
-	}
-	
-	.imagenSecundaria1, .imagenSecundaria2 {
-	width: 50%;
-	}
-	
-	.contenido {
-	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	}
-}
 
+    #imagen2, #imagen3 {
+        width: 48%;
+    }
+
+
+}
