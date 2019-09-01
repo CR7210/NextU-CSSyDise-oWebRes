@@ -1,0 +1,78 @@
+body {
+    font-family: 'Dancing Script', Arial, sans-serif;;
+    background-color: #02010a;
+
+}
+
+header {
+    background-color: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    color: white;
+    height: 80px;
+    padding: 0 2em;
+}
+
+header h1 {
+    text-shadow: 2px 2px 2px #02010a;
+    float: left;
+}
+
+header nav {
+    float: right;
+    padding: 1em;    
+}
+
+header nav a {
+    color: white;
+}
+
+header nav li {
+    display: inline;
+}
+
+header nav a:hover, header nav a:active{
+    text-decoration: none;
+}
+
+header nav .active a:link, header nav .active a:visited {
+    text-decoration: none;
+}
+
+.contenido {
+    display: flex;
+}
+
+.imagenCentral {
+    background-color: #82c3a6;
+
+}
+
+.imagenCentral, .imagenSecundaria1, .imagenSecundaria2 {
+
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+	.imagenCentral, .imagenSecundaria1, .imagenSecundaria2 {
+	width: 50%;
+	}
+}
+
+@media (min-width: 900px) {
+	.imagenCentral {
+	width: 900px;
+	}
+	
+	.imagenSecundaria1, .imagenSecundaria2 {
+	width: 50%;
+	}
+	
+	.contenido {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+}
+
