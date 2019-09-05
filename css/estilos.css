@@ -9,16 +9,18 @@ body {
     -moz-border-radius: 10px 10px 0px 0px;
     -webkit-border-radius: 10px 10px 0px 0px;
     color: white;
-    height: 80px;
     padding: 0 2em;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-#cabecera h1 {
+
+.columnaHeader h1 {
     text-shadow: 2px 2px 2px #02010a;
     float: left;
 }
 
-#cabecera nav {
+.columnaHeader nav {
     float: right;
     padding: 1em;    
 }
@@ -47,7 +49,6 @@ body {
 
 .container div {
 	box-sizing: border-box;
-	padding: 20px;
 }
 
 .imagenCentral {
@@ -66,6 +67,7 @@ figure img {
     height: 90%;
     border: 1px solid black;
     margin: 10px 0;
+    box-shadow: 2px 2px 2px 2px #02010a;    
 }
 
 #imagenCentral {
@@ -77,6 +79,39 @@ figure img {
     background-color:  #d5c75f;
     display: flex;
     width: 100%;    
+	padding: 20px;    
+}
+
+#imagenSecundaria1 img:hover {
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 2px 2px #82c3a6;
+}
+
+#imagenSecundaria2 img:hover {
+    transform: translate(20px, -5px);
+    box-shadow: 2px 2px 2px 2px #82c3a6;
+}
+
+.galeria1, .galeria2 {
+    background-color:  #d5c75f;
+    display: flex;
+    width: 100%;    
+	padding: 20px;    
+}
+
+.imagenG1 img {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.imagenGPar img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.imagenG3 img {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
 }
 
 
@@ -84,17 +119,34 @@ figure img {
     background-color: #C6d5c5;
     text-align: center;
     width: 100%;
-    border-radius: 0px 0px 10px 10px;    
+    border-radius: 0px 0px 10px 10px; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap; 
 }
 
-
-#imagenSecundaria1 img:hover {
-    transform: rotate(10deg);
-
+#contentinfo div {
+    box-sizing: border-box;
+    width: 25%;
 }
 
+.columnaFooter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.columnaFooter li {
+    margin: 0 0.15em;
+    
+}
 
 @media (max-width: 899px) {
+
+    .columnaHeader {
+        width: 100%;
+    }
 
 	.container {
         width: 100%;
@@ -108,18 +160,36 @@ figure img {
 
     .imagenesSecundarias {
         flex-direction: column;
-        margin: 0;
+        margin: 0 auto;
     }
 
+    .galeria1, .galeria2 {
+        flex-direction: column;
+        margin: 0 auto;   
+
+    }
+
+    #contentinfo div {
+        box-sizing: border-box;
+        width: 100%;
+    }
+        
 }
 
 @media (min-width: 900px) {
-	
+    .columnaHeader {
+        width: 50%;
+    }
+
 	.container {
 	    width: 900px;
 	    margin-left: auto;
 	    margin-right: auto;
 	}
 
-
+    #contentinfo div {
+        box-sizing: border-box;
+        width: 25%;
+    }
+    
 }
