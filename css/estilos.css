@@ -52,25 +52,31 @@ body {
 
 .imagenCentral {
     background-color: #82c3a6;
-    text-align: center;
     width: 100%;
 }
 
-#imagen1 {
-    width: 100%;
+figure  {
+    text-align: center;
+    width: 100%;    
+    margin: 0;
+}
+
+figure img {
+    width: 90%;
+    height: 90%;
     border: 1px solid black;
+    margin: 10px 0;
+}
+
+#imagenCentral {
+    background-color: #82c3a6;    
+
 }
 
 .imagenesSecundarias {
     background-color:  #d5c75f;
     display: flex;
     width: 100%;    
-}
-
-#imagen2, #imagen3 {
-    width: 50%;
-    border: 1px solid black;
-    margin: 10px;
 }
 
 
@@ -82,6 +88,11 @@ body {
 }
 
 
+#imagenSecundaria1 img:hover {
+    transform: rotate(10deg);
+
+}
+
 
 @media (max-width: 899px) {
 
@@ -91,28 +102,24 @@ body {
         margin-right: auto;
     }
 
+    .container div {
+        padding: 0;
+    }
+
     .imagenesSecundarias {
         flex-direction: column;
+        margin: 0;
     }
-
-    #imagen2, #imagen3 {
-        width: 98%;
-    }
-
 
 }
 
 @media (min-width: 900px) {
 	
 	.container {
-	width: 900px;
-	margin-left: auto;
-	margin-right: auto;
+	    width: 900px;
+	    margin-left: auto;
+	    margin-right: auto;
 	}
-
-    #imagen2, #imagen3 {
-        width: 48%;
-    }
 
 
 }
