@@ -14,14 +14,15 @@ body {
     flex-flow: row wrap;
 }
 
+.columnaHeader {
+    width: 100%;
+}
 
 .columnaHeader h1 {
     text-shadow: 2px 2px 2px #02010a;
-    float: left;
 }
 
 .columnaHeader nav {
-    float: right;
     padding: 1em;    
 }
 
@@ -144,8 +145,12 @@ figure img {
 
 @media (max-width: 899px) {
 
-    .columnaHeader {
-        width: 100%;
+    .columnaHeader h1 {
+        float: none;
+    }
+    
+    .columnaHeader nav {
+        float: none;
     }
 
 	.container {
@@ -177,9 +182,15 @@ figure img {
 }
 
 @media (min-width: 900px) {
-    .columnaHeader {
-        width: 50%;
+
+    .columnaHeader h1 {
+        float: left;
     }
+    
+    .columnaHeader nav {
+        float: right;
+    }
+
 
 	.container {
 	    width: 900px;
@@ -192,4 +203,28 @@ figure img {
         width: 25%;
     }
     
+}
+
+@keyframes cabecera-animacion {
+	0% {
+	position: relative;
+	margin-top: 150%;
+	}
+	60% {
+	position: relative;
+	margin-top: -5%;
+	}
+	100% {
+	position: relative;
+	margin-top: 0%;
+	}
+	}
+	
+	#cabecera {
+	animation-name: cabecera-animacion;
+	animation-duration: 2s;
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	-o-animation-delay: 0s;
+	animation-delay: 0s;
 }
